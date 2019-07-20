@@ -3,13 +3,19 @@
   <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css">
-    <title>Physics</title>
+    <title>符號運算</title>
   </head>
   <body>
-    <h1>Physics</h1>
-	<ul type="1" start="1">
-	  <li><a href="https://yatangyu.github.io/program-for-physics/">Programming for Physics</a></li>
-	  <li>3</li>
-	</ul>
+    <h1>符號運算</h1>
+<pre>  前一章我們介紹了數值模擬的方法，這也是一般用來解實際問題的方法。
+雖然數值方法速度快，又可以解所有問題，但是他確實還是有缺點，就是極小的誤差，而極小的誤差會因為模擬的時間拉長而跟著變大。
+因此，如果今天你是個完美主義者，希望把誤差降到最低，又不想用手算，python中也有符號運算的模組可以讓我們做符號的運算。
+</pre>
+<h2>Simpy 模組</h2>
+<p>在python裡import simpy模組，code:</p>
+<b>	import sympy as sp</b>
+<p>simpy模組提供我們可以進行符號的運算，首先先定義一個符號，假設想定義x為符號就可以用code:</p>
+<b>	x = sp.Symbol('x')</b>
+
   </body>
 </html>
