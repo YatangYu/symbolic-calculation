@@ -67,6 +67,14 @@ ul {
   cursor: url(Text.cur), auto;
   color: black;
 }
+
+mark{
+  font-family: DFKai-sb;
+  color: Blue;
+  background-color: powderblue;
+  
+}
+
 table, th, td {
   cursor: url(Text.cur), auto;
   border-collapse: collapse;
