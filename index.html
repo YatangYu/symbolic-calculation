@@ -12,7 +12,7 @@
 因此，如果今天你是個完美主義者，希望把誤差降到最低，又不想用手算，python中也有符號運算的模組可以讓我們做符號的運算。
 </pre>
 <h2>Simpy module</h2>
-<pre>simpy提供我們可以進行符號的運算，其中較常使用的是微分運算與積分運算。
+<pre>  simpy提供我們可以進行符號的運算，其中較常使用的是微分運算與積分運算。
 開始計算前，要先import simpy模組，code:
 	<b>from sympy import *</b>
 再來定義要被運算的符號們，假設想定義<mark>x</mark>為符號就可以用code:
@@ -54,11 +54,11 @@ integrate(function,(var,lower,upper))函式使用方法:
 <mark>upper:定積分的上限</mark>
 </pre>
 <h2>其他功能</h2>
-<pre>sympy裡有一個蠻重要的符號，也就是剛剛提到的 <mark>∞</mark> ，在sympy裡是用兩個 <mark>o</mark> 來表示，即:
+<pre>  sympy裡有一個蠻重要的符號，也就是剛剛提到的 <mark>∞</mark> ，在sympy裡是用兩個 <mark>o</mark> 來表示，即:
 	<mark>oo</mark>
 </pre>
 <pre>
-以上是比較常用到sympy裡的東西，其他還有不少功能，如limit的運算，微分、積分也可以作多變數的運算，這些大家以後有用到可以自己去查詢。
+  以上是比較常用到sympy裡的東西，其他還有不少功能，如limit的運算，微分、積分也可以作多變數的運算，這些大家以後有用到可以自己去查詢。
 最後在提醒大家，sympy不是萬能的，他是人類寫出來的東西，遵照維積分的運算法則，所以，如果要叫他算無解的式子他也做不到!
 </pre>
   </body>
