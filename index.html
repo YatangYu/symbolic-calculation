@@ -21,7 +21,7 @@
 <h2>微分</h2>
 <pre>假設我要把 <mark>f(x)=x<sup>3</sup>+x<sup>0.5</sup></mark> 對<mark>x</mark>微分，就可以寫code:
 	<b>ans=diff(x**3+x**0.5,x)</b>
-而運算完後，ans就會是微分的結果
+而運算完後，ans就會是微分的結果:
 	<b>0.5*x**(-0.5) + 3*x**2</b>
 
 diff(function,var) 函式使用方法:
@@ -33,7 +33,7 @@ diff(function,var) 函式使用方法:
 <h3>不定積分</h3>
 <pre>假設要算 <mark>f(x)=x<sup>3</sup></mark> 對<mark>x</mark>的積分，可以寫code:
 	<b>ans=integrate(x**3,x)</b>
-而運算完後，ans會是
+而運算完後，ans會是:
 	<b>x**4/4</b><mark>(請注意，sympy在作不定積分時不會幫我們加上常數項)</mark>
 
 integrate(function,var)函式使用方法:
@@ -43,9 +43,9 @@ integrate(function,var)函式使用方法:
 
 <h3>定積分</h3>
 <pre>這次把 <mark>f(x)=x<sup>3</sup></mark> 對<mark>x</mark>從<mark>0</mark>積到<mark>6</mark>，code:
-	<b>ans=integrate(x**3,(x,0,6))</b>
-而運算完後，ans會是
-	<b>324</b>
+	<b>ans=integrate(x**3,(x,0,r))</b>
+而運算完後，ans會是:
+	<b>r**4/4</b>
 
 integrate(function,(var,lower,upper))函式使用方法:
 <mark>function:想要算的函數</mark>
@@ -53,13 +53,32 @@ integrate(function,(var,lower,upper))函式使用方法:
 <mark>lower:定積分的下限</mark>
 <mark>upper:定積分的上限</mark>
 </pre>
+
+<h3>帶入數值</h3>
+<pre>subs 函式可以讓我們把數值帶到符號裡算出答案，前面做定積分的時候，得到:
+	<b>ans=r**4/4</b>
+如果r是5，可以用code:
+	<b>ans.subs(r,5)</b>
+就會得到帶入r=5的結果
+
+ans.subs(var,value)使用方法:
+<mark>ans:想帶入的式子</mark>
+<mark>var:要替換掉的符號</mark>
+<mark>value:要帶入的數字</mark>
+若想要帶入多個變數，可以用:
+ans.subs([(var1,value1),(var2,ralue2)...])
+的形式輸入多筆變數與數值
+</pre>
+
 <h2>其他功能</h2>
-<pre>  sympy裡有一個蠻重要的符號，也就是剛剛提到的 <mark>∞</mark> ，在sympy裡是用兩個 <mark>o</mark> 來表示，即:
+<pre>  sympy裡有一個蠻重要的符號 <mark>∞</mark> ，在sympy裡是用兩個 <mark>o</mark> 來表示，即:
 	<mark>oo</mark>
+另外還有在sympy裡 <mark>pi</mark> 也是做為一個特殊的符號被定義的。
 </pre>
 <pre>
-  以上是比較常用到sympy裡的東西，其他還有不少功能，如limit的運算，微分、積分也可以作多變數的運算，這些大家以後有用到可以自己去查詢。
+  以上是比較常用到sympy裡的東西，其他還有不少功能，如limit、三角函數等，微分、積分也可以作多變數的運算，這些大家以後有用到可以自己去查詢。
 最後在提醒大家，sympy不是萬能的，他是人類寫出來的東西，遵照維積分的運算法則，所以，如果要叫他算無解的式子他也做不到!
+甚至有些需要比較多技巧的情況下他會用你可能看不懂的表示方式來呈現答案，因此，有時也不能完全依賴sympy的符號運算。
 </pre>
   </body>
 </html>
